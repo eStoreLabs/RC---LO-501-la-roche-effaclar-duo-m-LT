@@ -49,6 +49,12 @@
       #es-laroche.es-laroche .es-kv {
         position: relative;
       }
+      #es-laroche.es-laroche .es-kv__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 16px;
+      }
       #es-laroche.es-laroche .es-kv__logo {
         padding-left: 5%;
         padding-bottom: 20px;
@@ -66,7 +72,7 @@
       #es-laroche.es-laroche .es-kv__logo-2 img {
         display: block;
         max-width: 200px;
-        margin: 0 auto;
+        margin: 0;
       }
       #es-laroche.es-laroche .es-kv__logo-2--desc {
         margin: 0;
@@ -597,6 +603,29 @@
       }
 
       @media screen and (min-width: 768px) {
+        #es-laroche.es-laroche .es-kv__header {
+          flex-direction: row;
+          margin: 0 auto;
+          margin-bottom: 32px;
+          padding: 0;
+          align-items: center;
+          max-width: 760px;
+        }
+        #es-laroche.es-laroche .es-kv__logo {
+          position: relative;
+          padding-left: 5%;
+          padding-bottom: 20px;
+          margin-top: -25px;
+          min-width: 50%;
+        }
+        #es-laroche.es-laroche .es-kv__logo-2 img {
+          margin-left: 60px;
+        }
+
+        #es-laroche.es-laroche .es-kv__logo-2--desc {
+          margin-left: 60px;
+        }
+
         #es-laroche.es-laroche .es-micro__content {
           position: absolute;
           top: 50%;
@@ -665,73 +694,7 @@
           margin-left: 0;
         }
       }
-      @media screen and (min-width: 659px) {
-        #es-laroche.es-laroche .es-use {
-          margin: 32px auto;
-        }
-        #es-laroche.es-laroche .es-use__container {
-          position: relative;
-          min-height: 334px;
-        }
-        #es-laroche.es-laroche .es-use__wrapper {
-          width: 100%;
-          position: absolute;
-          z-index: 1;
-        }
-        #es-laroche.es-laroche .es-use__left {
-          position: absolute;
-          top: 5%;
-          left: 5%;
-          z-index: 5;
-          width: 60% !important;
-        }
-        #es-laroche.es-laroche .es-kv__logo-2 {
-          position: absolute !important;
-          right: 5%;
-          top: 0;
-        }
-      }
-      @media screen and (min-width: 535px) {
-        #es-laroche.es-laroche .es-mobile-break {
-          display: none !important;
-        }
-        #es-laroche.es-laroche .es-kv__logo {
-          padding-bottom: 0;
-        }
-        #es-laroche.es-laroche .es-kv__logo img {
-          margin: 0 !important;
-        }
-        #es-laroche.es-laroche .es-kv__title {
-          margin: 40px 0 0 auto !important;
-        }
-        #es-laroche.es-laroche .es-kv__wrapper {
-          background-image: url("assets/bg-kv.png");
-          background-position: top 0 right 0;
-          background-size: 50% auto;
-          background-repeat: no-repeat;
-          justify-content: space-around;
-        }
-        #es-laroche.es-laroche .es-kv__left {
-          padding-bottom: 0;
-          order: 1;
-          width: 40%;
-        }
-        #es-laroche.es-laroche .es-kv__left p {
-          text-align: right;
-        }
-        #es-laroche.es-laroche .es-kv__packshot {
-          padding-bottom: 0 !important;
-          order: 2;
-        }
-        #es-laroche.es-laroche .es-kv__packshot--image {
-          min-width: 100px !important;
-        }
-        #es-laroche.es-laroche .es-kv__right {
-          width: 40%;
-          order: 3;
-          text-align: center;
-        }
-      }
+
       @keyframes slideright {
         from {
           opacity: 0;
@@ -757,15 +720,23 @@
   <body>
     <div class="es-laroche" id="es-laroche">
       <div class="es-kv">
-        <div class="es-kv__logo">
-          <img src="assets/logo-laroche.png" alt="La roche logo" />
-        </div>
-        <div class="es-kv__logo-2">
-          <img src="assets/logo2.png" alt="La roche logo" />
-          <p class="es-kv__logo-2--desc">GERA GYVENTI, KAI ODAI GERA</p>
+        <div class="es-kv__header">
+          <div class="es-kv__logo">
+            <img src="assets/logo-laroche.png" alt="La roche logo" />
+          </div>
+          <div class="es-kv__logo-2">
+            <img src="assets/logo2.png" alt="La roche logo" />
+            <p class="es-kv__logo-2--desc">GERA GYVENTI, KAI ODAI GERA</p>
+          </div>
         </div>
         <div class="es-kv__container">
           <div class="es-kv__wrapper">
+            <div class="es-kv__left">
+              <p>
+                <strong>Effaclar DUO+&nbsp;M</strong><br />
+                <span>Poveikis jau po 8 val.<sup>1</sup></span>
+              </p>
+            </div>
             <div class="es-kv__packshot">
               <img
                 src="assets/packshot.png"
@@ -773,13 +744,6 @@
                 class="es-kv__packshot--image"
               />
             </div>
-            <div class="es-kv__left">
-              <p>
-                <strong>Effaclar DUO+&nbsp;M</strong><br / />
-                <span>Poveikis jau po 8 val.<sup>1</sup></span>
-              </p>
-            </div>
-
             <div class="es-kv__right">
               <img
                 src="assets/logo-nr1.png"
